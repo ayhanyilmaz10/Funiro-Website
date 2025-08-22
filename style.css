@@ -1,0 +1,697 @@
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    height: 500vh;
+}
+
+.navbar-bg {
+    background-color: #ffffff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* ikonlar arası boşluk */
+    margin-left: auto; /* ikonları sağa yaslar */
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.titles{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.shop-name{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 10px;
+    display: flex;
+}
+.kutu1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    position: relative;
+}
+.house-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.card-container {
+  position: absolute;
+  top: 50%; /* Resmin dikey olarak ortasına yerleştirir */
+  right: 5%; /* Resmin sağ tarafından 5% boşluk bırakır */
+  transform: translateY(-50%); /* Dikey hizalama için */
+  width: 500px;
+  height: 350px;
+  padding: 40px; /* İç boşluk */
+  background-color: rgb(224, 210, 185);
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  /* İçindeki elemanları dikeyde düzenlemek için flexbox kullanabiliriz */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px; 
+}
+.new-arrival, .discover, .lorem1 {
+  position: static; /* Varsayılan konuma döner */
+  margin: 0; /* Marginleri sıfırlar */
+}
+.new-arrival{
+    font-weight: bold;
+}
+.discover {
+  font-size: 300%;
+  color: rgb(164, 108, 2);
+  font-weight: 500;
+}
+
+.lorem1 {
+  /* Genişliği ayarlanırsa daha düzenli durur */
+  width: 100%;
+}
+
+.browse-range {
+    margin-left: 40%;
+    display: flex;
+  font-size: 2em;
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.lorem2{
+    color: gray;
+    font-weight: 400;
+    display: flex;
+    margin-left: 37%;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.card2{
+    padding: 15px;
+    width: 550px;
+    height: 450px;
+    border-radius: 10px;
+
+}
+.card1, .card3{
+    padding: 15px;
+    width: 550px;
+    border-radius: 50px;
+    height: 450px;
+}
+.card1, .card2, .card3{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.card1:hover, .card2:hover, .card3:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+.room{
+    text-align: center;
+    font-weight: 500;
+}
+.cards2{
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 20px auto;
+}
+.card-item {
+  object-fit: cover;
+  margin-top: 100px;
+  width: 350px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+.card-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: filter 0.3s ease-in-out;
+}
+
+
+.card-item:hover img {
+  filter: grayscale(1);
+
+}
+
+
+.add-to-cart {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: white;
+  color: #a46c02;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.card-item:hover .add-to-cart {
+  opacity: 1;
+}
+.card-item:hover{
+    transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.our-products {
+  text-align: center;
+  font-size: 2.5em;
+  color: #a46c02;
+  font-weight: bold;
+  margin-top: 250px;
+  margin-bottom: 20px;
+}
+
+.like, .share, .compare {
+  position: absolute;
+  width: 24px;   
+  height: 24px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+.card-item:hover .like,
+.card-item:hover .share,
+.card-item:hover .compare {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+.like { top: 280px; right: 40px; }
+.share { top: 280px; right: 150px; }
+.compare { top: 280px; right: 285px; }
+
+.title-compare, .title-like, .title-share {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  font-size: 10px;
+  font-weight: bolder;
+  color: white;
+  opacity: 1;
+  z-index: 1;
+}
+
+.box{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: tomato;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 1;
+  color: white;
+  font-size: small;
+  left: 10px;
+  top: 10px;
+  text-align: justify;
+}
+
+.box1{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 1;
+  color: white;
+  font-size: small;
+  left: 10px;
+  top: 10px;
+  text-align: justify;
+}
+
+/*
+  kutu2 bölümü düzeni:
+  - Solda metin alanı, sağda görsel slider
+  - Grid kullanarak iki kolon oluşturuyoruz
+*/
+.kutu2{
+  border-radius: 15px;
+  left: 150px;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  top: 50px;
+  position: relative;
+  width: 80%;
+  height: auto;
+  padding: 40px 32px;
+  background-color: rgb(248, 245, 240);
+}
+
+.kutu2-left{ display: flex; flex-direction: column; justify-content: center; }
+.kutu2-right{ display: block; }
+
+.title3{
+  padding-left: 0;
+  text-align: left;
+  font-size: 2.8em;
+  color: #222;
+  font-weight: 800;
+  padding-top: 0;
+}
+.description{
+  padding-left: 0;
+  display: block;
+  text-align: left;
+  color: #6b7280;
+  font-size: 1.05em;
+  padding-top: 14px;
+  padding-bottom: 20px;
+  position: static;
+}
+.explore-more{ width: 150px; text-align: center; }
+
+.kutu2-items{ display:none; }
+
+/*
+  Slider alanı:
+  - .slider-container taşmayı gizler, sabit boyutlu bir pencere görevi görür
+  - .slider içindeki görseller yatayda sıralanır ve translateX ile kaydırılır
+*/
+.slider-container {
+  width: 600px;
+  height: 420px;
+  overflow: hidden;
+  margin: 0;
+  border-radius: 12px;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  gap: 16px;
+  transition: transform 500ms ease;
+}
+
+.slider img {
+  width: 600px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/*
+  Radyo butonlarını gizliyoruz:
+  - Sadece CSS ile state tutmak için kullanılıyor
+*/
+#s1, #s2, #s3, #s4 { display: none; }
+
+/* Varsayılan pozisyon */
+.slider { transform: translateX(0); }
+
+/*
+  Her seçili durumda şeridi 616px sola kaydır:
+  - 600px görüntü + 16px boşluk = 616px adım
+*/
+#s1:checked ~ .slider-row .slider { transform: translateX(0); }
+#s2:checked ~ .slider-row .slider { transform: translateX(-616px); }
+#s3:checked ~ .slider-row .slider { transform: translateX(-1232px); }
+#s4:checked ~ .slider-row .slider { transform: translateX(-1848px); }
+
+/*
+  Tek ileri butonu görünürlüğü:
+  - Hangi slayt aktifse sadece o slaytın bir sonrasına giden buton görünür
+*/
+.nav-next { display: none; }
+#s1:checked ~ .slider-row .side-next .next-1 { display: inline-flex; }
+#s2:checked ~ .slider-row .side-next .next-2 { display: inline-flex; }
+#s3:checked ~ .slider-row .side-next .next-3 { display: inline-flex; }
+#s4:checked ~ .slider-row .side-next .next-4 { display: inline-flex; }
+
+/*
+  Bilgi metninin slayta göre değişmesi:
+  - Tüm metinler DOM'da durur, sadece aktif olana display:block uygulanır
+*/
+.idx-1, .idx-2, .idx-3, .idx-4 { display:none; }
+#s1:checked ~ .slider-meta .info-card .idx-1 { display:block; }
+#s2:checked ~ .slider-meta .info-card .idx-2 { display:block; }
+#s3:checked ~ .slider-meta .info-card .idx-3 { display:block; }
+#s4:checked ~ .slider-meta .info-card .idx-4 { display:block; }
+
+
+.dots .dot { cursor: default; }
+#s1:checked ~ .slider-meta .dots .dot:nth-child(1) { width: 20px; background: #a46c02; }
+#s2:checked ~ .slider-meta .dots .dot:nth-child(2) { width: 20px; background: #a46c02; }
+#s3:checked ~ .slider-meta .dots .dot:nth-child(3) { width: 20px; background: #a46c02; }
+#s4:checked ~ .slider-meta .dots .dot:nth-child(4) { width: 20px; background: #a46c02; }
+
+
+#s1:checked ~ .slider-meta .dots .dot:nth-child(n+2),
+#s2:checked ~ .slider-meta .dots .dot:not(:nth-child(2)),
+#s3:checked ~ .slider-meta .dots .dot:not(:nth-child(3)),
+#s4:checked ~ .slider-meta .dots .dot:not(:nth-child(4)) { width: 8px; background: #d1d5db; }
+
+
+.slider-row{ display:flex; align-items:center; gap:12px; }
+
+.side-next{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+
+.nav-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: #a46c02;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  margin: 14px 0 0 0;
+}
+
+.slider-meta .info-card {
+  padding: 16px 18px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+.info-index{ color:#6b7280; font-size: 12px; }
+.info-title{ font-weight: 700; font-size: 20px; color:#111827; }
+.info-cta{ display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:6px; background:#a46c02; color:#fff; cursor:pointer; margin-left:8px; }
+
+.slider-meta .dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: #d1d5db;
+  transition: width 250ms ease, background 250ms ease;
+}
+
+.kutu3{
+  display: flex;
+  margin-top: 150px;
+  position: absolute;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.gör1, .gör2, .gör3{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.gör4, .gör5, .gör6, .gör7,.gör8{
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+}
+.gör4{
+  top: 150px;
+  left: -1050px;
+  position: relative;
+}
+.gör1{
+  top: 50px;
+  left: 189px;
+  position: relative;
+}
+.gör3{
+  top: 50px;
+  left: 220px;
+  position: relative;
+}
+.gör2{
+  top: 50px;
+  left: 200px;
+  position: relative;
+
+}
+.gör5{
+  top: 150px;
+  left: -120px;
+  position: relative;
+}
+.gör6{
+  top: -50px;
+  left: 550px;
+  position: relative;
+}
+.gör7{
+  top: -50px;
+  left: -400px;
+  position: relative;
+}
+.gör8{
+  top: 0px;
+  left: -400px;
+  position: relative;
+}
+
+
+.kutu3{
+  top: 150px;
+  position: relative;            /* önceki absolute değerini sıfırlarız */
+  display: grid;                 /* grid düzeni */
+  grid-template-columns: repeat(5, 1fr); /* 5 sütunlu kolaj */
+  grid-auto-rows: 10px;          /* satır temel yüksekliği; span değerleriyle oynarız */
+  gap: 16px;                     /* görseller arası boşluk */
+  max-width: 1200px;             /* sayfada ortalama genişlik */
+  margin: 150px auto 60px;       /* üstten boşluk + ortalama */
+  padding: 0 16px;               /* kenar iç boşluğu */
+  justify-content: center;       /* içerik merkezde kalsın */
+}
+
+.kutu3 img{
+  width: 100%;                   /* hücreyi doldur */
+  height: 100%;
+  object-fit: cover;             /* taşmadan kırp */
+  display: block;
+  border-radius: 10px;
+  position: static;              /* daha önceki relative/top/left etkisiz */
+  top: auto; left: auto;
+}
+
+/* Kare görseller: yaklaşık 300px için 30 satır (30 x 10px) */
+.gör1, .gör2, .gör3{ grid-row: span 30; }
+
+/* Dikey görseller: yaklaşık 500px için 50 satır (50 x 10px) */
+.gör4, .gör5, .gör6, .gör7, .gör8{ grid-row: span 50; }
+
+/* İsteğe yakın konumlandırma: referansa benzer dağılım için sütun ipuçları */
+.gör4{ grid-column: 1; }
+.gör1{ grid-column: 2; }
+.gör2{ grid-column: 3; }
+.gör6{ grid-column: 4; }
+.gör8{ grid-column: 5; }
+
+
+
+.kutu3{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr); /* 6 sütun, öğeler 2 sütun kaplar */
+	grid-auto-rows: 12px; /* taban satır yüksekliği; aşağıdaki span sayılarıyla yükseklik veriyoruz */
+	gap: 16px;
+	max-width: 1200px;
+	margin: 150px auto 80px;
+	padding: 0 16px;
+}
+
+.kutu3 img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: 10px;
+	position: static; top: auto; left: auto; /* tüm manuel konumlandırmaları iptal */
+}
+
+/* Her görsel 2 sütun kaplasın; yükseklikleri farklı olsun */
+.gör1{ grid-column: span 2; grid-row: span 22; }
+.gör2{ grid-column: span 2; grid-row: span 30; }
+.gör3{ grid-column: span 2; grid-row: span 22; }
+.gör4{ grid-column: span 2; grid-row: span 32; }
+.gör5{ grid-column: span 2; grid-row: span 30; }
+.gör6{ grid-column: span 2; grid-row: span 32; }
+.gör7{ grid-column: span 2; grid-row: span 22; }
+.gör8{ grid-column: span 2; grid-row: span 30; }
+
+/* Sıkı yerleşim; boşlukları minimize etmek için */
+.kutu3{ grid-auto-flow: dense; }
+
+/* Responsive kırılımlar: sütun sayısını azalt */
+@media (max-width: 1024px){
+	.kutu3{ grid-template-columns: repeat(3, 1fr); grid-auto-rows: 12px; }
+	/* 3 sütunda da her öğe span 3/6 yerine 1/3 dilimde 2 sütun kaplamaya devam eder */
+}
+@media (max-width: 640px){
+	.kutu3{ grid-template-columns: repeat(2, 1fr); grid-auto-rows: 10px; }
+	/* küçük ekranda yükseklikleri biraz küçült */
+	.gör1{ grid-row: span 20; }
+	.gör2{ grid-row: span 26; }
+	.gör3{ grid-row: span 20; }
+	.gör4{ grid-row: span 28; }
+	.gör5{ grid-row: span 26; }
+	.gör6{ grid-row: span 28; }
+	.gör7{ grid-row: span 20; }
+	.gör8{ grid-row: span 26; }
+}
+
+.desc1{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100%;
+  font-weight: 600;
+  color: gray;
+}
+.desc2{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 200%;
+  font-weight: 600;
+}
+/* Eski footer düzeni devre dışı bırakıldı (yeni .site-footer kullanılıyor) */
+/* footer, .footer-logo, .desc4, .footer-middle, .links tanımlarını kaldırıyoruz */
+
+/* --- Site Footer (Funiro) --- */
+.site-footer{
+	background: #fafafa;
+	margin-top: 120px;
+	border-top: 1px solid #eee;
+	display: block;      /* footer etiketindeki flex'i geçersiz kıl */
+	height: auto;        /* sabit yüksekliği kaldır */
+}
+.footer-container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 48px 16px 80px;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 2fr; /* brand, links, help, newsletter */
+	gap: 48px;
+	align-items: flex-start;
+}
+.footer-logo{
+	font-weight: 800;
+	font-size: 24px;
+	margin-bottom: 16px;
+}
+.footer-address{
+	color: #9ca3af; /* gri */
+	font-style: normal;
+	line-height: 1.6;
+	font-size: 14px;
+}
+.footer-title{
+	color: #9ca3af;
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 0.04em;
+	text-transform: none;
+	margin-bottom: 20px;
+}
+.footer-list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 16px;
+	font-weight: 600;
+}
+.newsletter{
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+.newsletter-input{
+	flex: 1;
+	border: none;
+	border-bottom: 2px solid #d1d5db;
+	padding: 8px 0;
+	font-size: 14px;
+	background: transparent;
+	outline: none;
+}
+.newsletter-btn{
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid #111827;
+	padding: 8px 0;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+}
+
+@media (max-width: 900px){
+	.footer-container{ grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 600px){
+	.footer-container{ grid-template-columns: 1fr; }
+	.newsletter{ flex-direction: column; align-items: flex-start; }
+	.newsletter-btn{ align-self: flex-end; }
+}
